@@ -1,24 +1,31 @@
+/*Programmer name:      Myron J Moss II
+Project name:           Project 2
+Course, Day and time:   CIS1500, Monday 6 pm
+Date of completion:     6/15/2020
+Purpose:		        This application takes height and weight from user and calculates the Body Mass Index.
+*/
+
 import java.util.Scanner;
 
 public class BMI {
 
-    private static Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in); //takes in User Input
 
     public static void main(String[] args) {
-        printBMIHeader();
+        printBMIHeader(); //Prints BMI index
         System.out.println("Enter weight in pounds: ");
-        float weight = (float) scanner.nextDouble();
+        float weight = (float) scanner.nextDouble(); //stores user data for weight
         System.out.println("Enter height in inches: ");
-        float height = (float) scanner.nextDouble();
+        float height = (float) scanner.nextDouble(); // stores user data for height
 
-        calculateWeight(weight);
-        calculateHeight(height);
-        System.out.printf("BMI: " + "%.2f",calculateBMI(weight,height));
+        calculateWeight(weight); //stores weight in pounds
+        calculateHeight(height); //stores height in inches
+        System.out.printf("BMI: " + "%.2f",calculateBMI(weight,height)); // prints final solution of calculated BMI
     }
 
     public static float calculateWeight(float pounds){
         float weight = pounds * 703;
-       return weight;
+        return weight;
     }//end of weight calculator
 
     public static float calculateHeight(float inches){
