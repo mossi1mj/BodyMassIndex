@@ -12,7 +12,9 @@ public class BMI {
     private static Scanner scanner = new Scanner(System.in); //takes in User Input
 
     public static void main(String[] args) {
+
         printBMIHeader(); //Prints BMI index
+
         System.out.println("Enter weight in pounds: ");
         float weight = (float) scanner.nextDouble(); //stores user data for weight
         System.out.println("Enter height in inches: ");
